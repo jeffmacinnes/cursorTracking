@@ -3,7 +3,8 @@ from __future__ import division
 import os
 from os.path import join
 import matplotlib.pyplot as plt
-import matplotlib.image as mpimage
+import matplotlib.image as mpimg
+import numpy as np
 import argparse
 import json
 
@@ -31,6 +32,7 @@ def processSubj(subj):
     # loop through each trial, plot
     for t in np.arange(nTrials):
         plotRawTrial(t, rawData, plot_dir)
+        print('plot: trial {} for subj {}'.format(str(t+1), subj))
 
 
 
@@ -60,13 +62,13 @@ def plotRawTrial(idx, rawData, plot_dir):
 
     ### Plot results ############
     # load stim
-    stim = mpimg.imread(join('../../stimuli', trial['stimName']))
+    stim = mpimg.imread(join('../stimuli', trial['stimName']))
 
     # set figure dimensions
     if stim.shape[0] > stim.shape[1]:
         plt.figure(figsize=(10,8))
     else:
-        plt.figure(figisize=(8,10))
+        plt.figure(figsize=(8,10))
 
     # draw stim
     plt.imshow(stim, alpha=.5)

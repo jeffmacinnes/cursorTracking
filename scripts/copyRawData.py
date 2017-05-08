@@ -13,7 +13,7 @@ copied already. If so, cool, do nothing. If not, copy it.
 
 # Make a list of all existing raw data files
 raw_WBL_dir = '../../_copy_WBL_data_here/cursorTracking'
-data_dir = '../Data'
+data_dir = '../data'
 for f in os.listdir(raw_WBL_dir):
     # skip any hidden files
     if f[0] != '.':

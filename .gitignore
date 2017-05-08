@@ -1,6 +1,0 @@
-*.DS*
-*.pyc
-*.ipynb_checkpoints/
-stimuli/
-data/
-exposition/
