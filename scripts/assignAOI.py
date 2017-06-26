@@ -12,6 +12,8 @@ pd.options.mode.chained_assignment = None  # default='warn'
 
 
 """
+Run this before combineSubjs.py
+
 Loop through a given subject's output .tsv file. For each trial,
 find the corresponding AOIs image (if any). For each "gaze" point in the trial,
 determine which, if any, AOI it falls within.

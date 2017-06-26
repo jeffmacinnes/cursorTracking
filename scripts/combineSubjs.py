@@ -7,10 +7,10 @@ import pandas as pd
 import json
 
 """
-Combine the raw data files for all subjects into
+Combine the data files for all subjects into
 single master dataframe.
 
-Save output in data/groupResults/allSubjsRaw.tsv
+Save output in data/groupResults/allSubjs_cursorTracking.tsv
 """
 
 data_dir = '../data'
@@ -39,4 +39,4 @@ for f in subjFolders:
             allSubj_df = pd.concat([allSubj_df, subj_df])
 
 # write the output dataframe to csv
-allSubj_df.to_csv(join(output_dir, 'allSubjsRaw.tsv'), sep='\t', index=False)
+allSubj_df.to_csv(join(output_dir, 'allSubjs_cursorTracking.tsv'), sep='\t', index=False)
